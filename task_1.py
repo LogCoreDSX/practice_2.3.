@@ -5,6 +5,7 @@ import tkinter as tk
 from tkinter import ttk, scrolledtext, messagebox
 
 #Константы
+SAVE_FILE = 'resource/http_monitor.txt'
 URL_LIST = [
     "https://github.com/",
     "https://www.binance.com/en",
@@ -12,6 +13,7 @@ URL_LIST = [
     "https://jsonplaceholder.typicode.com/",
     "https://moodle.tomtit-tomsk.ru/"
 ]
+
 
 #Глобальные переменные
 status_list = []
@@ -71,7 +73,7 @@ def save_file():
             "Предупреждение", "Сначала выполните проверку !")
         return False
     try:
-        with open('http_monitor.txt', 'w', encoding = 'utf-8') as file_save:
+        with open(SAVE_FILE, 'w', encoding = 'utf-8') as file_save:
             file_save.write("- HTTP Status Monitor -\n\n")
             file_save.write("URL - Available - Code\n\n")
             for i in status_list:

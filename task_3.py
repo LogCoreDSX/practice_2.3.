@@ -7,7 +7,7 @@ from tkinter import ttk, messagebox
 
 # Константы
 URL_CBR = "https://www.cbr-xml-daily.ru/daily_json.js"
-SAVE_FILE = "save.json"
+SAVE_FILE = "resource/save.json"
 
 # ------------------ Логика ------------------
 

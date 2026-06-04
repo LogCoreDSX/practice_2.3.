@@ -7,7 +7,7 @@ from tkinter import ttk, messagebox, scrolledtext
 
 # Константы
 GITHUB_API_URL = "https://api.github.com"
-SAVE_FILE = "github_data.json"
+SAVE_FILE = "resource/github_data.json"
 
 # ------------------ Логика ------------------
 

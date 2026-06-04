@@ -6,6 +6,7 @@ from datetime import datetime
 
 # Константы
 REFRESH_SECONDS = 0.5
+SAVE_FILE = 'resource/system_monitor.log'
 
 # Глобальные переменные
 running = True
@@ -41,7 +42,7 @@ def update_display():
     tree.insert("", "end", values = ("CPU", f"{cpu_percent:.1f}%"))
     tree.insert("", "end", values = ("RAM", f"{memory_percent:.1f}%"))
     tree.insert("", "end", values = ("Disk", f"{disk_percent:.1f}%"))
-    with open('system_monitor.log', 'a', encoding = 'utf-8') as log_file:
+    with open(SAVE_FILE, 'a', encoding = 'utf-8') as log_file:
         log_file.write(
             f"CPU:{
             cpu_percent:.1f}% RAM:{
