@@ -1,0 +1,9 @@
+- HTTP Status Monitor -
+
+URL - Available - Code
+
+https://github.com/ - Available - 200
+https://www.binance.com/en - Not Available - 202
+https://tomtit.tomsk.ru/ - Available - 200
+https://jsonplaceholder.typicode.com/ - Available - 200
+https://moodle.tomtit-tomsk.ru/ - Available - 200
