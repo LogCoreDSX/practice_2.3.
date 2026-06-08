@@ -315,7 +315,6 @@ ttk.Button(btn_frame,
 # Центральная панель - дерево валют
 center_frame = ttk.LabelFrame(main_frame, text = "Все валюты", padding = "10")
 center_frame.grid(row = 0, column = 1, sticky = "nsew", padx = 5)
-
 columns = ("Код", "Название", "Курс", "Номинал")
 tree_main = ttk.Treeview(
     center_frame, columns = columns, show = "headings", height = 15)
@@ -327,11 +326,9 @@ tree_main.column("Код", width = 80)
 tree_main.column("Название", width = 200)
 tree_main.column("Курс", width = 100)
 tree_main.column("Номинал", width = 80)
-
 scrollbar = ttk.Scrollbar(
     center_frame, orient = "vertical", command = tree_main.yview)
 tree_main.configure(yscrollcommand = scrollbar.set)
-
 tree_main.pack(side = "left", fill = "both", expand = True)
 scrollbar.pack(side = "right", fill = "y")
 
@@ -341,10 +338,8 @@ update_currency_tree(tree_main, currency_dict_main)
 right_frame = ttk.LabelFrame(
     main_frame, text = "Детали группы", padding = "10")
 right_frame.grid(row = 0, column = 2, sticky = "nsew", padx = (5, 0))
-
 text_area_main = tk.Text(right_frame, height=20, width=40, wrap = "word")
 text_area_main.pack(fill = "both", expand = True, pady = (0, 5))
-
 scrollbar_text = ttk.Scrollbar(
     right_frame, orient = "vertical", command = text_area_main.yview)
 text_area_main.configure(yscrollcommand  =  scrollbar_text.set)
